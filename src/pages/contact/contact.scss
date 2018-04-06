@@ -1,3 +1,11 @@
 page-contact {
-
+    .item-input::after {
+        border-bottom-color: transparent !important;
+    }
+    .ioninc-bg {
+        background-color: lightgray;
+    }
+    .ionic-card {
+        color: black !important;
+    }
 }

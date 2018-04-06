@@ -1,11 +1,47 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar color='primary'>
+        <ion-title>
+            Cronometro
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content class="ionic-bg">
+    <ion-card>
+        <ion-card-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <ion-item>
+                            <ion-label floating>Hour</ion-label>
+                            <ion-input type="number" disabled [(ngModel)]="hours">{{hours}}</ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item>
+                            <ion-label floating>Min</ion-label>
+                            <ion-input type="number" disabled [(ngModel)]="minutes">{{minutes}}</ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item>
+                            <ion-label floating>Seg</ion-label>
+                            <ion-input type="number" disabled [(ngModel)]="seconds">{{seconds}}</ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <button ion-button block (click)="timeStart()"><ion-icon name="play"></ion-icon></button>
+                    </ion-col>
+                    <ion-col>
+                        <button ion-button block outline (click)="timePause()"><ion-icon name="pause"></ion-icon></button>
+                    </ion-col>
+                    <ion-col>
+                        <button ion-button block outline color="danger" (click)="timeStop()"><ion-icon name="refresh"></ion-icon></button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-content>
+    </ion-card>
 </ion-content>
